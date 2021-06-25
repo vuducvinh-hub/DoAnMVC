@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ElectroShop.Models.MMenu>
+<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding-right menuarea">
+    <div class="mainmenu">
+        <nav>
+            <ul class="list-inline mega-menu">
+                <li class="active">
+                    <a href="~/">Trang Chủ</a>
+                    <!-- DROPDOWN MENU START -->
+                    @*<div class="home-var-menu">
+                <ul class="home-menu">
+                    <li><a href="index.html">Home variation 1</a></li>
+
+                </ul>
+            </div>*@
+                    <!-- DROPDOWN MENU END -->
+                </li>
+                @foreach (var item in Model)
+                {
+                    <li class="">
+                        <a href="~/@item.Link">@item.Name</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

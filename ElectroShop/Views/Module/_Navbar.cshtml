@@ -1,0 +1,29 @@
+﻿<section class="header-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="left-category-menu">
+                    <div class="left-product-cat">
+                        <div class="category-heading">
+                            <h2>category</h2>
+                        </div>
+                        <div class="category-menu-list">
+                            @Html.Action("Category","Module")
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="main-slider-area">
+                    <div class="slider-area">
+                        <div id="wrapper">
+                            <div class="slider-wrapper">
+                                @Html.Action("SlideShow","Module")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

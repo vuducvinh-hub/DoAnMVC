@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ElectroShop.Models.MCategory>
+@{
+    ViewBag.Title = "Chuyên LapTop Bổ Rẻ";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Action("Navbar", "Module")
+@Html.Action("ProductView", "Module")
+<section class="main-content-section-full-column">
+    @foreach (var cat in Model)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="featured-products-area">
+                        <div class="left-title-area">
+                            <h2 class="left-title">@cat.Name</h2>
+                        </div>
+                        <div class="row">
+                            <div class="feartured-carousel">
+                                @Html.Action("ProductHome", "Site", new { catid = cat.Id })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+@Html.Action("LatestNew", "Module")
